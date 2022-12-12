@@ -20,12 +20,10 @@ const Results = () => {
         })
   }, [resultQuery])
 
-  console.log(moviesResults)
-
   return (
     <div>
         <h1 className='mb-4 mt-8 text-2xl font-medium'>Resultados de la Búsqueda</h1>
-        <div className='grid grid-cols-4 gap-4 mb-8'>
+        <div className='grid grid-container gap-4 mb-8'>
             {
                 moviesResults.length === 0 && 
                 <h3>No se encontraron resultados.</h3>

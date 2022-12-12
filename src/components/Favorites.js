@@ -12,7 +12,7 @@ const Favorites = ( {favorites, addOrRemoveFromFavs}) => {
         !token && <Navigate replace to='/'/>
       }
         <h1 className='mb-4 mt-8 text-2xl font-medium'>Favoritos ({favorites.length})</h1>
-        <div className='grid grid-cols-4 gap-4 mb-8'>
+        <div className='grid grid-container gap-4 mb-8'>
           {
             favorites.map(movie => (
               <div className='relative flex flex-col card bg-slate-100 p-4 w-72' key={movie.id}>

@@ -66,7 +66,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Login/>} />
           <Route path='/home' element={<Trending addOrRemoveFromFavs={addOrRemoveFromFavs}/>} />
-          <Route path='/movies' element={<Movies addOrRemoveFromFavs={addOrRemoveFromFavs}/>} />
+          <Route path='/movies' element={<Movies addOrRemoveFromFavs={addOrRemoveFromFavs} favorites={favorites}/>} />
           <Route path='/tv' element={<TVShows addOrRemoveFromFavs={addOrRemoveFromFavs}/>} />
           <Route path='/movie-details/:movieId' element={<MovieDetails/>} />
           <Route path='/tvshow-details/:tvId' element={<TVDetails/>} />

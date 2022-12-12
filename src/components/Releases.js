@@ -38,7 +38,7 @@ const Releases = ( props ) => {
       }
       <div>
         <h1 className='mb-4 mt-8 text-2xl font-medium'>Próximos Estrenos</h1>
-        <div className='grid grid-cols-4 gap-4 mb-8'>
+        <div className='grid grid-container gap-4 mb-8'>
           {
             releasesList.map(release => (
               <div className='relative flex flex-col card bg-slate-100 p-4 w-72' key={release.id}>
