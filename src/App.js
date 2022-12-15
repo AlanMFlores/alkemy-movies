@@ -64,7 +64,7 @@ function App() {
       <div className='flex flex-col items-center'>
         <Header favorites={favorites}/>
         <Routes>
-          <Route path='/' element={<Login/>} />
+          <Route exact path='/' element={<Login/>} />
           <Route path='/home' element={<Trending addOrRemoveFromFavs={addOrRemoveFromFavs}/>} />
           <Route path='/movies' element={<Movies addOrRemoveFromFavs={addOrRemoveFromFavs} favorites={favorites}/>} />
           <Route path='/tv' element={<TVShows addOrRemoveFromFavs={addOrRemoveFromFavs}/>} />

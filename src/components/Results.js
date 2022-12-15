@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import MovieCard from './MovieCard';
 
 const Results = () => {
+let token = sessionStorage.getItem('token');
 
   let { resultQuery } = useParams();
 
@@ -21,6 +22,10 @@ const Results = () => {
   }, [resultQuery])
 
   return (
+    <>
+    {
+      !token && <Navigate replace to='/'/>
+    }
     <div>
         <h1 className='mb-4 mt-8 text-2xl font-medium'>Resultados de la Búsqueda</h1>
         <div className='grid grid-container gap-4 mb-8'>
@@ -35,6 +40,7 @@ const Results = () => {
             }
         </div>
     </div>
+    </>
   )
 
 }
