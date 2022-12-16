@@ -8,7 +8,6 @@ import emptyHeart from '../images/empty-heart.svg'
 import { data } from 'autoprefixer';
 
 const Movies = ( props ) => {
-  let token = sessionStorage.getItem('token');
 
   const MySwal = withReactContent(Swal);
 
@@ -34,9 +33,6 @@ const Movies = ( props ) => {
   
   return (
     <>
-      {
-        !token && <Navigate replace to='/'/>
-      }
       <div>
         <h1 className='mb-4 mt-8 text-2xl font-medium'>Películas Recomendadas</h1>
         <div className='grid grid-container gap-4 mb-8'>

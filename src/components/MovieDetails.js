@@ -6,8 +6,6 @@ import { Ring } from '@uiball/loaders'
 
 
 const MovieDetails = () => {
-    let token = sessionStorage.getItem('token')
-
     const [movie, setMovie] = useState(null);
     const [cast, setCast] = useState([]);
 
@@ -36,7 +34,6 @@ const MovieDetails = () => {
 
   return (
     <div className="mb-16">
-        { !token && <Navigate replace to='/'/> }
         { !movie && <Ring 
                     size={40}
                     lineWeight={5}

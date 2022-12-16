@@ -7,8 +7,6 @@ import withReactContent from 'sweetalert2-react-content';
 import emptyHeart from '../images/empty-heart.svg'
 
 const Trending = ( props ) => {
-    let token = sessionStorage.getItem('token');
-
     const MySwal = withReactContent(Swal);
 
     const [trendingMovieList, setTrendingMovieList] = useState([])
@@ -50,9 +48,6 @@ const Trending = ( props ) => {
 
   return (
     <>
-    {
-      !token && <Navigate replace to='/'/>
-    }
     <div>
       <h1 className='mb-4 mt-8 text-2xl font-medium'>Películas Destacadas</h1>
       <div className='grid grid-container gap-4 mb-8'>

@@ -8,8 +8,6 @@ import emptyHeart from '../images/empty-heart.svg'
 import { data } from 'autoprefixer';
 
 const TVShows = ( props ) => {
-  let token = sessionStorage.getItem('token');
-
   const MySwal = withReactContent(Swal);
 
   const [tvShow, setTvShow] = useState([])
@@ -34,9 +32,6 @@ const TVShows = ( props ) => {
   
   return (
     <>
-      {
-        !token && <Navigate replace to='/'/>
-      }
       <div>
         <h1 className='mb-4 mt-8 text-2xl font-medium'>Series de TV Recomendadas</h1>
         <div className='grid grid-container gap-4 mb-8'>

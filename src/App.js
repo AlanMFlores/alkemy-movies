@@ -1,5 +1,5 @@
 import './App.css';
-import Login from './components/Login';
+// import Login from './components/Login';
 import Trending from './components/Trending';
 import Movies from './components/Movies';
 import Header from './components/Header';
@@ -64,8 +64,7 @@ function App() {
       <div className='flex flex-col items-center'>
         <Header favorites={favorites}/>
         <Routes>
-          <Route exact path='/' element={<Login/>} />
-          <Route path='/home' element={<Trending addOrRemoveFromFavs={addOrRemoveFromFavs}/>} />
+          <Route path='/' element={<Trending addOrRemoveFromFavs={addOrRemoveFromFavs}/>} />
           <Route path='/movies' element={<Movies addOrRemoveFromFavs={addOrRemoveFromFavs} favorites={favorites}/>} />
           <Route path='/tv' element={<TVShows addOrRemoveFromFavs={addOrRemoveFromFavs}/>} />
           <Route path='/movie-details/:movieId' element={<MovieDetails/>} />

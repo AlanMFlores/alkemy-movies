@@ -1,16 +1,11 @@
 import React from 'react'
 import emptyHeart from '../images/empty-heart.svg'
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Favorites = ( {favorites, addOrRemoveFromFavs}) => {
 
-  let token = sessionStorage.getItem('token');
-
   return (
     <div className='flex flex-col'>
-      {
-        !token && <Navigate replace to='/'/>
-      }
         <h1 className='mb-4 mt-8 text-2xl font-medium'>Favoritos ({favorites.length})</h1>
         <div className='grid grid-container gap-4 mb-8'>
           {

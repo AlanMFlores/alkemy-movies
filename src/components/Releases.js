@@ -7,8 +7,6 @@ import withReactContent from 'sweetalert2-react-content';
 import emptyHeart from '../images/empty-heart.svg'
 
 const Releases = ( props ) => {
-  let token = sessionStorage.getItem('token');
-
   const MySwal = withReactContent(Swal);
 
   const [releasesList, setReleasesList] = useState([])
@@ -33,9 +31,6 @@ const Releases = ( props ) => {
   
   return (
     <>
-      {
-        !token && <Navigate replace to='/'/>
-      }
       <div>
         <h1 className='mb-4 mt-8 text-2xl font-medium'>Próximos Estrenos</h1>
         <div className='grid grid-container gap-4 mb-8'>

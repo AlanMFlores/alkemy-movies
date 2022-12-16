@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header className='flex pr-8 lg:pr-16 pl-8 lg:pl-16 p-6 bg-slate-100 w-full justify-between relative'>
-        <Link to={'/home'}>
+        <Link to={'/'}>
             <img src={alkemyLogo} alt='header logo'/>
         </Link>
         <nav className={`flex flex-col items-center bg-slate-100 p-8 pb-16 gap-8 absolute z-10 left-0 right-0 close-menu ${isActive && 'translate-x-0'} lg:static lg:flex-row lg:translate-x-0 lg:pb-0 lg:p-0`}>
@@ -29,7 +29,7 @@ const Header = () => {
 
             <ul className='flex flex-col items-center gap-8 text-slate-900 lg:flex-row'>
                 <li>
-                    <Link to={'/home'}>Home</Link>
+                    <Link to={'/'}>Home</Link>
                 </li>
                 <li>
                     <Link to={'/movies'}>Películas</Link>
